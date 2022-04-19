@@ -21,7 +21,7 @@ pipeline {
                               "files": [
                                  {
                                   "pattern": "$WORKSPACE/Demo-Artifactory/Artifact_*",
-                                  "target": "result/",
+                                  "target": "image-ge-generic-dev-local/",
                                   "recursive": "false"
                                 } 
                              ]
@@ -51,12 +51,12 @@ pipeline {
                     serverId: SERVER_ID,
 
                     //Optional parameters
-                    targetRepo: 'result/',
+                    targetRepo: 'image-ge-generic-dev-local/',
                     displayName: 'Promote me please',
                     buildName: JOB_NAME,
                     buildNumber: BUILD_NUMBER,
                     comment: 'this is the promotion comment',
-                    sourceRepo: 'result/',
+                    sourceRepo: 'image-ge-generic-dev-local/',
                     status: 'Released',
                     includeDependencies: true,
                     failFast: true,
